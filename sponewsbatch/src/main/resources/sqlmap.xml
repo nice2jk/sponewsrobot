@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlmap>
+	<!-- Match -->
+	<sql key="insertMatch">INSERT INTO match_info (match_id, sports, league, description, match_time, home_name, away_name, match_type, home_ratio, draw_ratio, away_ratio) Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</sql>
+	<sql key="getMatch">SELECT count(*) FROM match_info WHERE match_id = ?</sql>
+	<sql key="updateMatch">UPDATE match_info SET home_ratio = ?, draw_ratio = ?, away_ratio = ?, description = ?, match_time = ? where match_id = ?</sql>
+	
+	<!-- Match Result -->
+	<sql key="insertMatchWithResult">INSERT INTO match_info (no, sports, league, description, time, home_name, away_name, home_ratio, draw_ratio, away_ratio, type, proto_num, toto_num, score, result) Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</sql>
+	<sql key="updateResult">UPDATE match_info SET score=?, result=? WHERE match_no = ?</sql>
+	<sql key="getMatchResult">SELECT result FROM match_info where match_no = ?</sql>
+	<sql key="getMatchScore">SELECT score FROM match_info where match_no = ?</sql>	
+		
+	<!-- Sell --> 
+	<sql key="getUserListFromMatchSell">SELECT DISTINCT user_no FROM match_sell</sql>
+	<sql key="getSellList">SELECT * FROM match_sell</sql>
+	<sql key="updateUserSellResult">UPDATE match_sell SET sell_result_yn = ?, sell_betmoney_result = ? where sell_no = ?</sql>
+	<sql key="getUserSumBetMoney">SELECT SUM(sell_betmoney) FROM match_sell WHERE user_no = ? AND sell_result_yn is not null</sql>
+	<sql key="getUserSumBetMoneyResult">SELECT SUM(sell_betmoney_result) FROM match_sell WHERE user_no = ? AND sell_result_yn is not null</sql>
+	<sql key="getUserSumBetMoneyBySports">SELECT SUM(A.sell_betmoney) FROM match_sell AS A, match_info AS B WHERE A.user_no = ? AND A.sell_result_yn is not null AND A.match_no = B.match_no AND B.sports = ?</sql>
+	<sql key="getUserSumBetMoneyResultBySports">SELECT SUM(A.sell_betmoney_result) FROM match_sell AS A, match_info AS B WHERE A.user_no = ? AND A.sell_result_yn is not null AND A.match_no = B.match_no AND B.sports = ?</sql>
+	
+	<!-- Ratio -->
+	<sql key="getUserSellList">SELECT * FROM match_sell WHERE user_no = ?</sql>
+	<sql key="updateUserSellSuccess">UPDATE user_optr SET sell_success = sell_success + 1 where user_no = ?</sql>
+	<sql key="updateUserSellFail">UPDATE user_optr SET sell_fail = sell_fail + 1 where user_no = ?</sql>
+	<sql key="updateUserSellCancel">UPDATE user_optr SET sell_cancel = sell_cancel + 1 where user_no = ?</sql>
+	<sql key="initUserSellResultCount">UPDATE user_optr SET sell_success = 0, sell_fail = 0, sell_cancel = 0</sql>
+	<sql key="updateUserRatio">UPDATE user_optr SET sell_ratio_total = ? where user_no = ?</sql>
+	<sql key="updateUserRatioForSoccer">UPDATE user_optr SET sell_ratio_soccer = ? where user_no = ?</sql>
+	<sql key="updateUserRatioForBasball">UPDATE user_optr SET sell_ratio_baseball = ? where user_no = ?</sql>
+	<sql key="updateUserRatioForBasketball">UPDATE user_optr SET sell_ratio_basketball = ? where user_no = ?</sql>
+	<sql key="updateUserRatioForVolleyball">UPDATE user_optr SET sell_ratio_volleyball = ? where user_no = ?</sql>
+	
+</sqlmap>
