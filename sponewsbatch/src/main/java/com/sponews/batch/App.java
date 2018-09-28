@@ -1,5 +1,9 @@
 package com.sponews.batch;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.sponews.batch.controller.MatchController;
 import com.sponews.batch.controller.ResultController;
 import com.sponews.batch.service.CralwerService;
@@ -23,6 +27,10 @@ public class App
     		
     		MatchController matchController = new MatchController();
     		matchController.processWeb();
+    		
+    		System.out.println(new Date(1538220600L * 1000));
+    		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    		System.out.println(dt.format(new Date(1538220600L * 1000)));
     		
     		/*ResultController resultController = new ResultController();
     		resultController.processWeb();*/

@@ -5,6 +5,16 @@
 			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
 	<!-- Match Service -->
+	<bean id="swayService" class="com.sponews.batch.service.SwayService">
+		<property name="swayMatchDAO" ref="swayMatchDAO" />	
+	</bean>
+	
+	<bean id="swayMatchDAO" class="com.sponews.batch.dao.sway.SwayMatchDAO">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+		<property name="sqlService" ref="sqlService" />
+	</bean>
+	
+	<!-- Match Service -->
 	<bean id="matchService" class="com.sponews.batch.service.MatchService">
 		<property name="matchDAO" ref="matchDAO" />
 	</bean>

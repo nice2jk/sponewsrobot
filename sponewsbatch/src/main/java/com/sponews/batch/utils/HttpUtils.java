@@ -75,31 +75,21 @@ private static HttpUtils httpUtils;
 	
 	public String getHttpHTML(String urlToRead) {
 	    try {
-
-	        /*conn.setRequestMethod("GET");*/
-	        
-	        int count = 0;
-	        
-			URL url = new URL(urlToRead);
+	        URL url = new URL(urlToRead);
 			URLConnection connection = url.openConnection();
 			connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.0 Safari/532.5");
-			connection.setRequestProperty("Content-Type", "text/html;charset=euc-kr");
-			connection.setRequestProperty("Cache-Control", "no-cache");
-			
-			
-			
-			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "euc-kr"));
+						
+			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
 		    StringBuffer sb = new StringBuffer();
 		    String str = "";
 		    		    
-			while((str = br.readLine())!=null){				
+			while((str = br.readLine())!=null){
 				sb.append(str).append("\n");
 			}
 			
 			br.close();
-
-			/*System.out.println(sb.toString());*/
+			
 			return sb.toString();	        
 	    } catch (IOException e) {
 	        e.printStackTrace();

@@ -29,4 +29,8 @@ public class Constants {
 	public static String MATCH_RESULT_OVER = "OVER";
 	public static String MATCH_RESULT_UNDER = "UNDER";
 	public static String MATCH_RESULT_CANCEL = "CANCEL";
+	
+	
+	
+	public static String SWAY_PL_URL = "https://kr.soccerway.com/national/england/premier-league/20182019/regular-season/r48730/";
 }
