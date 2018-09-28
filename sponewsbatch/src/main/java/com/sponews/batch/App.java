@@ -21,11 +21,11 @@ public class App
     	try {
     		System.out.println( "SpoNews Start!!" );
     		
-    		/*MatchController matchController = new MatchController();
-    		matchController.processWeb();*/
+    		MatchController matchController = new MatchController();
+    		matchController.processWeb();
     		
-    		ResultController resultController = new ResultController();
-    		resultController.processWeb();
+    		/*ResultController resultController = new ResultController();
+    		resultController.processWeb();*/
     		
     		/*String crawlStorageFolder = "/data/crawl/root";
             int numberOfCrawlers = 7;

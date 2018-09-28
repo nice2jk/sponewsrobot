@@ -8,6 +8,7 @@ public class MatchController extends BaseController {
 	
 	public MatchController() {
 		matchService = (MatchService) this.context.getBean("matchService");
+		System.out.println("match service" + matchService);
 	}
 	
 	public void processWeb() {

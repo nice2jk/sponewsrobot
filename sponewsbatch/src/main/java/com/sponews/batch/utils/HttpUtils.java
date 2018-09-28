@@ -61,7 +61,6 @@ private static HttpUtils httpUtils;
 			br = new BufferedReader(new InputStreamReader(ips, "euc-kr"));
 			
 			while ((str = br.readLine()) != null) {
-				System.out.println(str);
 				sb.append(str + "\n");
 			}
 			
@@ -100,7 +99,7 @@ private static HttpUtils httpUtils;
 			
 			br.close();
 
-			System.out.println(sb.toString());
+			/*System.out.println(sb.toString());*/
 			return sb.toString();	        
 	    } catch (IOException e) {
 	        e.printStackTrace();

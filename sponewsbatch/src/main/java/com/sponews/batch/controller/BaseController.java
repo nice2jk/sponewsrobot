@@ -9,5 +9,6 @@ public class BaseController {
 	
 	public BaseController() {
 		context = new GenericXmlApplicationContext("applicationContext.xml"); 
+		System.out.println("on load");
 	}
 }

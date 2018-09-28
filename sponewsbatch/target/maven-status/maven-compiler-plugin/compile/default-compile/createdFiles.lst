@@ -9,6 +9,7 @@ com\sponews\batch\model\ProtoVO.class
 com\sponews\batch\controller\BaseController.class
 com\sponews\batch\App.class
 com\sponews\batch\dao\sqlservice\SqlService.class
+com\sponews\batch\service\CralwerService.class
 com\sponews\batch\service\ResultService.class
 com\sponews\batch\controller\ResultController.class
 com\sponews\batch\utils\HttpUtils.class
