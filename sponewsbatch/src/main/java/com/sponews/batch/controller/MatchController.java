@@ -13,8 +13,8 @@ public class MatchController extends BaseController {
 		swayService = (SwayService) this.context.getBean("swayService");
 	}
 	
-	public void processWeb() {
+	public void processWeb(String league) {
 		/*this.matchService.setMatchList();*/
-		this.swayService.setMatchList();
+		this.swayService.setMatchList(league);
 	}
 }

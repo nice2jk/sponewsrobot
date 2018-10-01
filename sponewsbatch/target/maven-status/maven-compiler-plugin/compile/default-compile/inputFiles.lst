@@ -1,7 +1,10 @@
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\common\Constants.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\model\MatchVO.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\dao\sqlservice\SqlList.java
+D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\dao\SwayMatchDAO.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\service\CralwerService.java
+D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\service\SwayService.java
+D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\model\SwayMatchVO.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\dao\MatchDAO.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\controller\ResultController.java
 D:\Dev\git\sponewsrobot\sponewsbatch\src\main\java\com\sponews\batch\service\BaseService.java

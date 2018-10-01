@@ -9,7 +9,7 @@
 		<property name="swayMatchDAO" ref="swayMatchDAO" />	
 	</bean>
 	
-	<bean id="swayMatchDAO" class="com.sponews.batch.dao.sway.SwayMatchDAO">
+	<bean id="swayMatchDAO" class="com.sponews.batch.dao.SwayMatchDAO">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 		<property name="sqlService" ref="sqlService" />
 	</bean>
