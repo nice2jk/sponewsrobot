@@ -33,7 +33,7 @@
 	<sql key="updateUserRatioForVolleyball">UPDATE user_optr SET sell_ratio_volleyball = ? where user_no = ?</sql>
 	
 	<!-- Sway Match -->
-	<sql key="insertSwayMatch">INSERT INTO sway_match (league, description, match_time, home_name, away_name) Values (?, ?, ?, ?, ?)</sql>
+	<sql key="insertSwayMatch">INSERT INTO sway_match (match_id, league, description, match_time, home_name, away_name) Values (?, ?, ?, ?, ?, ?)</sql>
 	<sql key="getMatch">SELECT count(*) FROM sway_match WHERE match_id = ?</sql>
 	<sql key="updateMatch">UPDATE sway_match SET score = ?, match_time = ? WHERE match_id = ?</sql>
 </sqlmap>
