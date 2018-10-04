@@ -22,8 +22,8 @@ public class SwayService extends BaseService {
 		this.swayMatchDAO = swayMatchDAO;
 	}
 	
-	public void setMatchList(String league) {
-		List<SwayMatchVO> matchList = getSwayMatchList(league);
+	public void setMatchList(String league, String url) {
+		List<SwayMatchVO> matchList = getSwayMatchList(league, url);
 		
 		for(int i = 0; i < matchList.size(); i++) {
 			if(swayMatchDAO.getSwayMatch(matchList.get(i).getMatchId()) > 0) {
@@ -36,10 +36,10 @@ public class SwayService extends BaseService {
 		}
 	}
 	
-	private List<SwayMatchVO> getSwayMatchList(String league) {
+	private List<SwayMatchVO> getSwayMatchList(String league, String url) {
 		List<SwayMatchVO> matchList = new ArrayList<SwayMatchVO>();
 		
-		Document doc = Jsoup.parse(getContents(Constants.SWAY_PL_URL));
+		Document doc = Jsoup.parse(getContents(url));
 		Elements es = doc.getElementsByAttributeValueContaining("class", "no-date-repetition");
 		
 		for(Element el:es) {
@@ -61,11 +61,11 @@ public class SwayService extends BaseService {
 			} else {
 	    		SimpleDateFormat dt = new SimpleDateFormat("HH:mm");
 	    		swayMatchVO.setScore(dt.format(new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000))));
-	    		System.out.println(dt.format(new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000))));
+	    		/*System.out.println(dt.format(new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000))));*/
 	    		swayMatchVO.setStatus(Constants.MATCH_STATUS_BEFORE);
 			}
 			
-			/*System.out.println(swayMatchVO);*/
+			System.out.println(swayMatchVO);
 			
 			matchList.add(swayMatchVO);
 		}

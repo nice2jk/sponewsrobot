@@ -13,7 +13,7 @@ public class App
     		System.out.println( "SpoNews Start!!" );
     		
     		MatchController matchController = new MatchController();
-    		matchController.processWeb("premier-league");
+    		matchController.processWeb();
     		
     		System.out.println(new Date(1538220600L * 1000));
     		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd HH:mm");

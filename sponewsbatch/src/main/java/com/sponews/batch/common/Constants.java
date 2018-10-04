@@ -33,5 +33,5 @@ public class Constants {
 	public static int MATCH_STATUS_BEFORE = 0;
 	public static int MATCH_STATUS_AFTER = 1;	
 	
-	public static String SWAY_PL_URL = "https://kr.soccerway.com/national/england/premier-league/20182019/regular-season/r48730/";
+	public static String SWAY_EPL_URL = "https://kr.soccerway.com/international/europe/uefa-champions-league/20182019/play-offs/r48411/matches/";
 }
