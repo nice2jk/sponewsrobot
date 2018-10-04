@@ -1,8 +1,5 @@
 package com.sponews.batch.controller;
 
-import java.util.Map;
-
-import com.sponews.batch.common.LeagueManager;
 import com.sponews.batch.service.MatchService;
 import com.sponews.batch.service.SwayService;
 
@@ -11,25 +8,24 @@ public class MatchController extends BaseController {
 	private MatchService matchService;
 	private SwayService swayService;
 	
-	public MatchController() {
+	private String leagueName;
+	private String leagueUrl;
+	private int interval;
+	
+	public MatchController(String leagueName, String leagueUrl, int interval) {
 		matchService = (MatchService) this.context.getBean("matchService");
 		swayService = (SwayService) this.context.getBean("swayService");
 		
-		
+		this.leagueName = leagueName;
+		this.leagueUrl = leagueUrl;
+		this.interval = interval;
 	}
 	
 	public void processWeb() {
-		LeagueManager leagueManager = LeagueManager.getInstance();
-		
-		Map<String, String> leagueTable = leagueManager.getLeagueTable();
-		
-		for(String leagueKey : leagueTable.keySet()) {
-			System.out.println(leagueKey + " | " + leagueTable.get(leagueKey));			
-		}
-		
-		/*this.matchService.setMatchList();*/
-		this.swayService.setMatchList("EPL", leagueTable.get("EPL"));
-		
-		
+		this.swayService.setMatchList(this.leagueName, this.leagueUrl);
+	}
+	
+	public int getInterval() {
+		return this.interval;
 	}
 }

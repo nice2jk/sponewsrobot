@@ -4,7 +4,7 @@ public class Constants {
 
 	public static boolean USE_DB_YN = false;
 	
-	public static int MATCH_THREAD_TIME = 1800000;
+	public static int MATCH_THREAD_TIME = 10800000;
 	public static int RESULT_THREAD_TIME = 3600000;
 	public static int USER_THREAD_TIME = 5400000;
 	
@@ -34,4 +34,9 @@ public class Constants {
 	public static int MATCH_STATUS_AFTER = 1;	
 	
 	public static String SWAY_EPL_URL = "https://kr.soccerway.com/international/europe/uefa-champions-league/20182019/play-offs/r48411/matches/";
+	
+	// 30min, 1h, 2h, 3h, 4h, 5h, 6h, 10h
+	public static final int[] FETCH_INTERVAL = {
+		1800000, 3600000, 7200000, 10800000, 14400000, 18000000, 21600000, -1, -1, -1, 36000000
+	};
 }

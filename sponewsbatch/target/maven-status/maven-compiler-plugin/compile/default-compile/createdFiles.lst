@@ -5,8 +5,10 @@ com\sponews\batch\dao\MatchDAO$1.class
 com\sponews\batch\dao\SwayMatchDAO$1.class
 com\sponews\batch\service\CralwerService.class
 com\sponews\batch\utils\HttpUtils.class
+com\sponews\batch\common\LeagueManager.class
 com\sponews\batch\dao\SwayMatchDAO.class
 com\sponews\batch\utils\ParseUtils.class
+com\sponews\batch\controller\job\MatchThread.class
 com\sponews\batch\service\SwayService.class
 com\sponews\batch\service\MatchService.class
 com\sponews\batch\dao\sqlservice\SqlList.class
@@ -15,7 +17,9 @@ com\sponews\batch\model\ProtoVO.class
 com\sponews\batch\controller\BaseController.class
 com\sponews\batch\App.class
 com\sponews\batch\dao\sqlservice\SqlService.class
+com\sponews\batch\job\MatchThread.class
 com\sponews\batch\service\ResultService.class
+com\sponews\batch\model\LeagueVO.class
 com\sponews\batch\controller\ResultController.class
 com\sponews\batch\dao\sqlservice\SqlData.class
 com\sponews\batch\dao\ResultDAO.class
