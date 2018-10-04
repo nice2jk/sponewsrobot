@@ -18,8 +18,6 @@ public class App {
 			Map<String, Object> leagueTable = leagueManager.getLeagueTable();
 
 			for (String leagueKey : leagueTable.keySet()) {
-				System.out.println(leagueKey + " | " + leagueTable.get(leagueKey));
-				
 				LeagueVO leagueVO = (LeagueVO) leagueTable.get(leagueKey);
 
 				MatchController matchController = new MatchController(leagueKey, leagueVO.getUrl(), leagueVO.getThreadTime());

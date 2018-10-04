@@ -24,6 +24,7 @@ public class SwayService extends BaseService {
 	
 	public void setMatchList(String league, String url) {
 		List<SwayMatchVO> matchList = getSwayMatchList(league, url);
+		System.out.println(league + " match size : " + matchList.size());
 		
 		for(int i = 0; i < matchList.size(); i++) {
 			if(swayMatchDAO.getSwayMatch(matchList.get(i).getMatchId()) > 0) {
@@ -65,7 +66,7 @@ public class SwayService extends BaseService {
 	    		swayMatchVO.setStatus(Constants.MATCH_STATUS_BEFORE);
 			}
 			
-			System.out.println(swayMatchVO);
+			/*System.out.println(swayMatchVO);*/
 			
 			matchList.add(swayMatchVO);
 		}

@@ -15,7 +15,7 @@ public class MatchThread extends Thread {
 	public void run() {
 		while(true) {
 			try {
-				System.out.println("Match Thread Start!!!");
+				System.out.println(matchController.getLeagueName() + " Thread Start!!!");
 				
 				matchController.processWeb();
 				
