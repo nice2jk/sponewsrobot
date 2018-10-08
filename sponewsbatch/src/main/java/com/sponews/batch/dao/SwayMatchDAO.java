@@ -40,8 +40,8 @@ public class SwayMatchDAO {
 		});
 	}
 	
-	public int updateSwayMatch(String matchId, String score, String matchTime) {
-		return this.jdbcTemplate.update(this.sqlService.getSql("updateSwayMatch"), score, matchTime, matchId);
+	public int updateSwayMatch(String matchId, int status, String score, String matchTime) {
+		return this.jdbcTemplate.update(this.sqlService.getSql("updateSwayMatch"), status, score, matchTime, matchId);
 	}
 	
 	public int getSwayMatch(String matchId) {

@@ -29,7 +29,7 @@ public class SwayService extends BaseService {
 		for(int i = 0; i < matchList.size(); i++) {
 			if(swayMatchDAO.getSwayMatch(matchList.get(i).getMatchId()) > 0) {
 				if(matchList.get(i).getStatus() == Constants.MATCH_STATUS_AFTER) {
-					swayMatchDAO.updateSwayMatch(matchList.get(i).getMatchId(), matchList.get(i).getScore(), matchList.get(i).getMatchTime());	
+					swayMatchDAO.updateSwayMatch(matchList.get(i).getMatchId(), Constants.MATCH_STATUS_AFTER, matchList.get(i).getScore(), matchList.get(i).getMatchTime());	
 				}
 			} else {
 				swayMatchDAO.inserSwaytMatch(matchList.get(i));
