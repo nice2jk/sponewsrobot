@@ -31,11 +31,12 @@ public class SwayMatchDAO {
 				ps.setString(1, smvo.getMatchId());
 				ps.setString(2, smvo.getLeague());
 				ps.setString(3, smvo.getDescription());
-				ps.setString(4, smvo.getMatchTime());
-				ps.setString(5, smvo.getHomeTeam());
-				ps.setString(6, smvo.getAwayTeam());
-				ps.setInt(7, smvo.getStatus());
-				ps.setString(8, smvo.getScore());
+				ps.setInt(4, smvo.getMatchMonth());
+				ps.setString(5, smvo.getMatchTime());
+				ps.setString(6, smvo.getHomeTeam());
+				ps.setString(7, smvo.getAwayTeam());
+				ps.setInt(8, smvo.getStatus());
+				ps.setString(9, smvo.getScore());
 			}
 		});
 	}

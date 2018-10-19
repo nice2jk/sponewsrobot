@@ -5,6 +5,7 @@ public class SwayMatchVO {
 	private String matchId;
 	private String league;
 	private String description;
+	private int matchMonth;
 	private String matchTime;
 	private String homeTeam;
 	private String awayTeam;
@@ -37,6 +38,14 @@ public class SwayMatchVO {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public int getMatchMonth() {
+		return matchMonth;
+	}
+
+	public void setMatchMonth(int matchMonth) {
+		this.matchMonth = matchMonth;
 	}
 
 	public String getMatchTime() {
@@ -114,15 +123,9 @@ public class SwayMatchVO {
 	@Override
 	public String toString() {
 		return "SwayMatchVO [matchId=" + matchId + ", league=" + league + ", description=" + description
-				+ ", matchTime=" + matchTime + ", homeTeam=" + homeTeam + ", awayTeam=" + awayTeam + ", homeRatio="
-				+ homeRatio + ", drawRatio=" + drawRatio + ", awawyRatio=" + awawyRatio + ", score=" + score
-				+ ", result=" + result + ", status=" + status + ", getMatchId()=" + getMatchId() + ", getLeague()="
-				+ getLeague() + ", getDescription()=" + getDescription() + ", getMatchTime()=" + getMatchTime()
-				+ ", getHomeTeam()=" + getHomeTeam() + ", getAwayTeam()=" + getAwayTeam() + ", getHomeRatio()="
-				+ getHomeRatio() + ", getDrawRatio()=" + getDrawRatio() + ", getAwawyRatio()=" + getAwawyRatio()
-				+ ", getScore()=" + getScore() + ", getResult()=" + getResult() + ", getStatus()=" + getStatus()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+				+ ", matchMonth=" + matchMonth + ", matchTime=" + matchTime + ", homeTeam=" + homeTeam + ", awayTeam="
+				+ awayTeam + ", homeRatio=" + homeRatio + ", drawRatio=" + drawRatio + ", awawyRatio=" + awawyRatio
+				+ ", score=" + score + ", result=" + result + ", status=" + status + "]";
 	}
 
 }

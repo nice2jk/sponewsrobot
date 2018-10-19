@@ -2,6 +2,7 @@ package com.sponews.batch.service;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -54,6 +55,11 @@ public class SwayService extends BaseService {
 			swayMatchVO.setAwayTeam(el.getElementsByAttributeValueContaining("class", "team-b").text());
 			swayMatchVO.setMatchTime(el.attr("data-timestamp"));
 			
+			Date date = new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000));
+			Calendar c = Calendar.getInstance();
+    		c.setTime(date);
+    		swayMatchVO.setMatchMonth(c.get(Calendar.YEAR) * 100 + (c.get(Calendar.MONTH) + 1));
+    		
 			String score = el.getElementsByAttributeValueContaining("class", "score").text();
 			
 			if(score.contains("-")) {
@@ -61,8 +67,8 @@ public class SwayService extends BaseService {
 				swayMatchVO.setStatus(Constants.MATCH_STATUS_AFTER);
 			} else {
 	    		SimpleDateFormat dt = new SimpleDateFormat("HH:mm");
-	    		swayMatchVO.setScore(dt.format(new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000))));
-	    		/*System.out.println(dt.format(new Date((Long.valueOf(swayMatchVO.getMatchTime()) * 1000))));*/
+	    		swayMatchVO.setScore(dt.format(date));
+	    	
 	    		swayMatchVO.setStatus(Constants.MATCH_STATUS_BEFORE);
 			}
 			
