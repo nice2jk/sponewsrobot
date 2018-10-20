@@ -12,6 +12,11 @@ public class MatchController extends BaseController {
 	private String leagueUrl;
 	private int interval;
 
+	
+	public MatchController() {
+		this(null, null, 0);
+	}
+
 	public MatchController(String leagueName, String leagueUrl, int interval) {
 		matchService = (MatchService) this.context.getBean("matchService");
 		swayService = (SwayService) this.context.getBean("swayService");
@@ -31,6 +36,10 @@ public class MatchController extends BaseController {
 
 	public String getLeagueName() {
 		return leagueName;
+	}
+	
+	public void processFix() {
+		swayService.getAllMatch();
 	}
 
 }

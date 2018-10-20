@@ -30,6 +30,10 @@ public class Constants {
 	public static String MATCH_RESULT_UNDER = "UNDER";
 	public static String MATCH_RESULT_CANCEL = "CANCEL";
 	
+	public static int RESULT_WIN = 1;
+	public static int RESULT_DRAW = 0;
+	public static int RESULT_LOSE = 2;
+	
 	public static int MATCH_STATUS_BEFORE = 0;
 	public static int MATCH_STATUS_AFTER = 1;	
 	

@@ -13,7 +13,7 @@ public class SwayMatchVO {
 	private float drawRatio;
 	private float awawyRatio;
 	private String score;
-	private String result;
+	private int result;
 	private int status;
 
 	public String getMatchId() {
@@ -104,11 +104,11 @@ public class SwayMatchVO {
 		this.score = score;
 	}
 
-	public String getResult() {
+	public int getResult() {
 		return result;
 	}
 
-	public void setResult(String result) {
+	public void setResult(int result) {
 		this.result = result;
 	}
 

@@ -30,7 +30,7 @@ public class SwayService extends BaseService {
 		for(int i = 0; i < matchList.size(); i++) {
 			if(swayMatchDAO.getSwayMatch(matchList.get(i).getMatchId()) > 0) {
 				if(matchList.get(i).getStatus() == Constants.MATCH_STATUS_AFTER) {
-					swayMatchDAO.updateSwayMatch(matchList.get(i).getMatchId(), Constants.MATCH_STATUS_AFTER, matchList.get(i).getScore(), matchList.get(i).getMatchTime());	
+					swayMatchDAO.updateSwayMatch(matchList.get(i).getMatchId(), Constants.MATCH_STATUS_AFTER, matchList.get(i).getScore(), matchList.get(i).getMatchTime(), matchList.get(i).getResult());	
 				}
 			} else {
 				swayMatchDAO.inserSwaytMatch(matchList.get(i));
@@ -65,6 +65,19 @@ public class SwayService extends BaseService {
 			if(score.contains("-")) {
 				swayMatchVO.setScore(score);
 				swayMatchVO.setStatus(Constants.MATCH_STATUS_AFTER);
+				
+				String[] split = score.split("-");
+				
+				int home = Integer.valueOf(split[0].trim());
+				int away = Integer.valueOf(split[1].trim());
+				
+				if(home > away) {
+					swayMatchVO.setResult(Constants.RESULT_WIN);
+				} else if (home < away) {
+					swayMatchVO.setResult(Constants.RESULT_LOSE);
+				} else {
+					swayMatchVO.setResult(Constants.RESULT_DRAW);
+				}
 			} else {
 	    		SimpleDateFormat dt = new SimpleDateFormat("HH:mm");
 	    		swayMatchVO.setScore(dt.format(date));
@@ -78,5 +91,9 @@ public class SwayService extends BaseService {
 		}
 		
 		return matchList;
+	}
+	
+	public void getAllMatch() {
+		swayMatchDAO.getAllMatch();
 	}
 }
