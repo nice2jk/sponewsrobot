@@ -36,7 +36,6 @@
 	<sql key="insertSwayMatch">INSERT INTO sway_match (match_id, league, description, match_mm, match_time, home_name, away_name, status, score) Values (?, ?, ?, ?, ?, ?, ?, ?, ?)</sql>
 	<sql key="getSwayMatch">SELECT count(*) FROM sway_match WHERE match_id = ?</sql>
 	<sql key="updateSwayMatch">UPDATE sway_match SET status = ?, score = ?, match_time = ?, result = ? WHERE match_id = ?</sql>
-	<sql key="updateSwayMatchResult">UPDATE sway_match SET result = ? WHERE match_id = ?</sql>
-	
+	<sql key="updateSwayMatchResult">UPDATE sway_match SET result = ? WHERE match_id = ?</sql>	
 	<sql key="getAllMatch">SELECT match_id, score FROM sway_match</sql>
 </sqlmap>

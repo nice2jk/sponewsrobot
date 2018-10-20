@@ -78,6 +78,7 @@ public class SwayService extends BaseService {
 				} else {
 					swayMatchVO.setResult(Constants.RESULT_DRAW);
 				}
+				
 			} else {
 	    		SimpleDateFormat dt = new SimpleDateFormat("HH:mm");
 	    		swayMatchVO.setScore(dt.format(date));

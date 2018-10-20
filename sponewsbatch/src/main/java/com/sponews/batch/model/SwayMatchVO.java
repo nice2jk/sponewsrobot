@@ -127,5 +127,6 @@ public class SwayMatchVO {
 				+ awayTeam + ", homeRatio=" + homeRatio + ", drawRatio=" + drawRatio + ", awawyRatio=" + awawyRatio
 				+ ", score=" + score + ", result=" + result + ", status=" + status + "]";
 	}
+	
 
 }

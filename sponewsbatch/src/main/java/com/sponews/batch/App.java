@@ -11,7 +11,7 @@ public class App {
 	public static void main(String[] args) {
 		try {
 			System.out.println("SpoNews Start!!");
-						
+
 			LeagueManager leagueManager = LeagueManager.getInstance();
 			Map<String, Object> leagueTable = leagueManager.getLeagueTable();
 

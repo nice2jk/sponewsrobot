@@ -12,7 +12,6 @@ public class MatchController extends BaseController {
 	private String leagueUrl;
 	private int interval;
 
-	
 	public MatchController() {
 		this(null, null, 0);
 	}
@@ -37,7 +36,7 @@ public class MatchController extends BaseController {
 	public String getLeagueName() {
 		return leagueName;
 	}
-	
+
 	public void processFix() {
 		swayService.getAllMatch();
 	}
