@@ -27,7 +27,8 @@ public class LeagueManager {
 		leagueTable.put("SPL", new LeagueVO("SPL", "https://kr.soccerway.com/national/spain/primera-division/20182019/regular-season/r47983/matches/", 10800000));
 		leagueTable.put("IPL", new LeagueVO("IPL", "https://kr.soccerway.com/national/italy/serie-a/20182019/regular-season/r48235/matches/", 10800000));
 		leagueTable.put("FPL", new LeagueVO("FPL", "https://kr.soccerway.com/national/france/ligue-1/20182019/regular-season/r48044/matches/", 10800000));
-		leagueTable.put("UCL", new LeagueVO("UCL", "https://kr.soccerway.com/international/europe/uefa-champions-league/20182019/play-offs/r48411/matches/", 21600000));
+		leagueTable.put("UCL", new LeagueVO("UCL", "https://kr.soccerway.com/international/europe/uefa-champions-league/20182019/group-stage/r48410/matches/", 21600000));
+													
 	}
 	
 	public Map<String, Object> getLeagueTable() {
