@@ -63,8 +63,14 @@ public class SwayService extends BaseService {
 			String score = el.getElementsByAttributeValueContaining("class", "score").text();
 			
 			if(score.contains("-")) {
-				swayMatchVO.setScore(score);
 				swayMatchVO.setStatus(Constants.MATCH_STATUS_AFTER);
+				
+				if(score.contains("E")) {
+					score = score.substring(score.indexOf("-") - 2, score.indexOf("-") + 3);
+					swayMatchVO.setScore("E " + score);
+				} else {
+					swayMatchVO.setScore(score);	
+				}
 				
 				String[] split = score.split("-");
 				

@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.sponews.batch.common.LeagueManager;
 import com.sponews.batch.controller.MatchController;
+import com.sponews.batch.controller.ResultController;
 import com.sponews.batch.controller.job.MatchThread;
 import com.sponews.batch.model.LeagueVO;
 
@@ -23,6 +24,9 @@ public class App {
 				MatchThread matchThread = new MatchThread(matchController);
 				matchThread.start();
 			}
+			
+			/*ResultController rc = new ResultController();
+			rc.processWeb();*/
 			
 		} catch (Exception e) {
 			e.printStackTrace();

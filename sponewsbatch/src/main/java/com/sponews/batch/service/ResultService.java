@@ -31,7 +31,7 @@ public class ResultService extends BaseService {
 
 	public void setResultList() {
 		/*getContents("http://m.betman.co.kr/winningResultProto.so?method=detail&gameId=G101&gameRound=180067&page=1");*/
-		getContents("https://kr.soccerway.com/national/england/premier-league/20182019/regular-season/r48730/");
+		System.out.println(getContents("http://www.betman.co.kr/gameInfoMain.so?gameId=G101&gameRound=190020"));
 		/*System.out.println(getContents("http://m.betman.co.kr/winningResultProto.so?method=detail&gameId=G101&gameRound=180066&page=1"));*/
 		
 		/*List<ProtoVO> protoList = this.getProtoList(getContents(Constants.HOST_RESULT));
